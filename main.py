@@ -5,14 +5,14 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 # 別ファイルの呼び出し
 import config
 import reply_by_chatgpt
-import config_log
+import setting
 
 # 各トークンを格納
 SLACK_BOT_TOKEN = config.SLACK_BOT_TOKEN
 SLACK_APP_TOKEN = config.SLACK_APP_TOKEN
 
 # 応答生成器を指定
-reply_generator = reply_by_chatgpt.GPT3_5(config_log.log, config_log.log_file)
+reply_generator = reply_by_chatgpt.GPT3_5(setting.log, setting.log_file)
 
 # slackbotとの連携
 app = App(token=SLACK_BOT_TOKEN)
