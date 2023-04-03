@@ -3,7 +3,7 @@
 ## How to Use
 1. Clone this repository.
     ```shell
-    $ git clone 
+    $ git clone https://github.com/laksjdh/slack_bot.git
     ```
 1. Change directory to the cloned repository.
     ```shell
