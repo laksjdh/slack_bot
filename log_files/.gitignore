@@ -1,0 +1,7 @@
+# Ignore all dotfiles
+.*
+# Except for .gitignore
+!.gitignore
+
+# Ignore jsonfiles
+*.json
