@@ -24,6 +24,9 @@ while is_default != "y" and is_default != "n":
                 for init_message_option in init_message_options:
                     print(">", init_message_option)
                 init_message = input("init message: ")
+                while init_message not in init_message_options:
+                    print(f"{init_message} というinit messageは存在しません。再度入力してください。")
+                    log_file = input("init message: ")
                 log = []
                 log.append(init_messages[init_message])
 
