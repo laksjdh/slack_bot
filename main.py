@@ -18,9 +18,9 @@ reply_generator = reply_by_chatgpt.GPT3_5(setting.log, setting.log_file)
 app = App(token=SLACK_BOT_TOKEN)
 
 # 特定のメッセージに反応
-@app.message("hawawa")
-def ask_who(say):
-    say("hoee")
+# @app.message("hawawa")
+# def ask_who(say):
+#     say("hoee")
 
 # メンションに反応
 @app.event("app_mention")
