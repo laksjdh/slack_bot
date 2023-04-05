@@ -1,5 +1,20 @@
 # ChatGPT for SlackBot
 
+## ディレクトリ構造
+```
+.
+├── README.md
+├── .env # 各自で追加
+├── .gitignore
+├── __pycache__
+├── config.py
+├── init_messages.json # 各自で追加
+├── log_files
+├── main.py
+├── reply_by_chatgpt.py
+└── setting.py
+```
+
 ## 使い方
 1. リポジトリをクローンする。
     ```shell
