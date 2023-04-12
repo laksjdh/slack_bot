@@ -7,6 +7,8 @@ import config
 import reply_by_chatgpt
 import setting
 
+import re
+
 # 各トークンを格納
 SLACK_BOT_TOKEN = config.SLACK_BOT_TOKEN
 SLACK_APP_TOKEN = config.SLACK_APP_TOKEN
@@ -25,8 +27,10 @@ app = App(token=SLACK_BOT_TOKEN)
 # メンションに反応
 @app.event("app_mention")
 def respond_to_mention(event, say):
-    text = event["text"]
+    raw_text = event["text"]
     user = event["user"]
+
+    text = re.sub("<@.*>", "", raw_text) # メンションの文字列を除去
 
     reply_generator.input_message(text)
     reply = reply_generator.get_response()["content"]
