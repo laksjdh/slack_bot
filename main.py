@@ -36,6 +36,6 @@ def respond_to_mention(event, say):
     reply = reply_generator.get_response()["content"]
     reply_generator.write_json()
 
-    say(f"<@{user}> {reply}")
+    say(thread_ts=event["event_ts"], text=f"<@{user}> {reply}")
 
 SocketModeHandler(app, SLACK_APP_TOKEN).start()
